@@ -1,6 +1,6 @@
 # dotfiles
 
-My personal dotfiles for macOS. Clean, minimal, and optimized for productivity.
+Personal dotfiles for macOS. Clean, minimal, and optimized for productivity.
 
 ![macOS](https://img.shields.io/badge/macOS-000000?style=flat&logo=apple&logoColor=white)
 ![Zsh](https://img.shields.io/badge/Zsh-F15A24?style=flat&logo=zsh&logoColor=white)
@@ -15,8 +15,8 @@ My personal dotfiles for macOS. Clean, minimal, and optimized for productivity.
 
 | Tool | Description |
 |------|-------------|
-| **Zsh** | Shell config with [Powerlevel10k](https://github.com/romkatv/powerlevel10k) prompt |
-| **Neovim** | [LazyVim](https://www.lazyvim.org/) setup for a modern editing experience |
+| **[Zsh](https://www.zsh.org/)** | Shell with [Oh My Zsh](https://ohmyz.sh/) + [Powerlevel10k](https://github.com/romkatv/powerlevel10k) |
+| **[Neovim](https://neovim.io/)** | [LazyVim](https://www.lazyvim.org/) setup for a modern editing experience |
 | **[WezTerm](https://wezfurlong.org/wezterm/)** | GPU-accelerated terminal with iTerm2-style keybindings |
 | **[Karabiner](https://karabiner-elements.pqrs.org/)** | Caps Lock → Hyper Key (⌘⌃⌥⇧) |
 | **[Git](https://git-scm.com/)** | Global config with sensible defaults |
@@ -31,7 +31,7 @@ My personal dotfiles for macOS. Clean, minimal, and optimized for productivity.
 git clone https://github.com/nicowenterodt/dotfiles.git ~/dotfiles
 
 # Run the install script
-cd ~/dotfiles && chmod +x install.sh && ./install.sh
+cd ~/dotfiles && install.sh
 ```
 
 The install script is **idempotent** — safe to run multiple times.
@@ -45,6 +45,7 @@ The install script is **idempotent** — safe to run multiple times.
 | `⌘ ⇧ D` | Split pane vertically |
 | `⌘ W` | Close pane |
 | `⌘ ⌥ ←↑↓→` | Navigate between panes |
+| `⌘ ⌥ h/j/k/l` | or with vim motions |
 
 ### Karabiner
 | Shortcut | Action |

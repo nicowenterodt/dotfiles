@@ -41,7 +41,7 @@ config.keys = {
 		mods = "CMD",
 		action = wezterm.action.CloseCurrentPane({ confirm = true }),
 	},
-	-- Navigate between panes
+	-- Navigate between panes (arrow keys)
 	{
 		key = "LeftArrow",
 		mods = "CMD|OPT",
@@ -59,6 +59,27 @@ config.keys = {
 	},
 	{
 		key = "DownArrow",
+		mods = "CMD|OPT",
+		action = wezterm.action.ActivatePaneDirection("Down"),
+	},
+	-- Navigate between panes (vim motions)
+	{
+		key = "h",
+		mods = "CMD|OPT",
+		action = wezterm.action.ActivatePaneDirection("Left"),
+	},
+	{
+		key = "l",
+		mods = "CMD|OPT",
+		action = wezterm.action.ActivatePaneDirection("Right"),
+	},
+	{
+		key = "k",
+		mods = "CMD|OPT",
+		action = wezterm.action.ActivatePaneDirection("Up"),
+	},
+	{
+		key = "j",
 		mods = "CMD|OPT",
 		action = wezterm.action.ActivatePaneDirection("Down"),
 	},

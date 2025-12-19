@@ -3,6 +3,12 @@ DOTFILES=~/dotfiles
 
 echo "☕ Setting up dotfiles..."
 
+# Oh My Zsh (install if not present)
+if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
+  echo "Installing Oh My Zsh..."
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+fi
+
 # Zsh
 ln -sf $DOTFILES/zsh/.zshrc ~/.zshrc
 ln -sf $DOTFILES/zsh/.zprofile ~/.zprofile
