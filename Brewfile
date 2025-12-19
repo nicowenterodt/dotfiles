@@ -1,4 +1,6 @@
 brew "git"
+brew "lazygit"
+brew "lazydocker"
 brew "neovim"
 brew "powerlevel10k"
 
