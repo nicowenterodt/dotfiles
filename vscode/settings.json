@@ -1,0 +1,58 @@
+{
+  // Theme & Appearance
+  "window.title": " ",
+  "workbench.colorTheme": "Night Owl (No Italics)",
+  "workbench.iconTheme": "vs-seti",
+  "workbench.colorCustomizations": {
+    "editorGroupHeader.tabsBackground": "#00000000",
+    "tab.activeBackground": "#00000000",
+    "tab.inactiveBackground": "#00000000",
+    "tab.border": "#00000000",
+    "editorGroupHeader.tabsBorder": "#00000000",
+    "editorGroup.border": "#00000000",
+    "quickInput.background": "#3d023a",
+    "quickInput.foreground": "#cdcdcd",
+    "list.activeSelectionForeground": "#ffffff",
+    "list.inactiveSelectionForeground": "#ffffff",
+    "list.focusAndSelectionOutline": "#00000000",
+    "list.highlightForeground": "#ffffff"
+  },
+
+  // Workbench Layout
+  "workbench.activityBar.location": "top",
+  "workbench.statusBar.visible": false,
+  "workbench.navigationControl.enabled": false,
+  "workbench.layoutControl.enabled": false,
+  "window.commandCenter": false,
+  "breadcrumbs.enabled": false,
+
+  // Editor Tabs & Behavior
+  "workbench.editor.showTabs": "multiple",
+  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.editor.enablePreview": false,
+  "editor.minimap.enabled": false,
+  "editor.glyphMargin": false,
+
+  // Tree & Navigation
+  "workbench.tree.renderIndentGuides": "onHover",
+  "workbench.tree.enableStickyScroll": false,
+
+  // Version Control
+  "git.decorations.enabled": false,
+
+  // AI & Extensions
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "extensions.ignoreRecommendations": true,
+
+  // File Handling
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": false,
+  "chat.commandCenter.enabled": false,
+  "workbench.startupEditor": "none",
+}

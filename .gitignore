@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Local Git config kept in repo but not tracked
+git/.gitconfig.local

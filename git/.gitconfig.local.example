@@ -1,0 +1,9 @@
+# Example local Git configuration (copied to .gitconfig.local by install.sh)
+# Put private or machine-specific overrides here.
+
+[user]
+	name = Your Name
+	email = your@email
+
+[github]
+  user = GitHub user handle
