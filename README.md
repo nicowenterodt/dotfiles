@@ -31,10 +31,21 @@ Personal dotfiles for macOS. Clean, minimal, and optimized for productivity.
 git clone https://github.com/nicowenterodt/dotfiles.git ~/dotfiles
 
 # Run the install script
-cd ~/dotfiles && install.sh
+cd ~/dotfiles && ./install.sh
 ```
 
-The install script is **idempotent** — safe to run multiple times.
+The install script is **idempotent** — safe to run multiple times without breaking your setup.
+
+### What the Install Script Does
+
+- Installs [Oh My Zsh](https://ohmyz.sh/) if not present
+- Creates symlinks for all configuration files
+- **Automatically backs up** existing configs to `~/.dotfiles_backup/YYYY-MM-DD_HH-MM-SS/`
+- Installs Homebrew packages from Brewfile
+- Validates installation and reports status
+- Detects script location (doesn't have to be in `~/dotfiles`)
+
+All backups are kept indefinitely - you can manually clean them up when needed.
 
 ## ⌨️ Key Bindings
 
@@ -47,10 +58,21 @@ The install script is **idempotent** — safe to run multiple times.
 | `⌘ ⌥ ←↑↓→` | Navigate between panes |
 | `⌘ ⌥ h/j/k/l` | or with vim motions |
 
-### Karabiner
+### Karabiner Elements
+
+Two profiles configured for different keyboard types:
+
+| Profile | Keyboard Type | Description |
+|---------|---------------|-------------|
+| **default** | ANSI | For MacBook built-in keyboard |
+| **external** | ISO | For mechanical external keyboards |
+
+Both profiles include:
 | Shortcut | Action |
 |----------|--------|
 | `Caps Lock` | Hyper Key (⌘⌃⌥⇧) |
+
+**Switching profiles:** Open Karabiner-Elements preferences → Select "Profiles" tab → Choose your profile
 
 ## 📁 Structure
 
@@ -86,11 +108,50 @@ Managed via `Brewfile`:
    ```bash
    nvim ~/dotfiles/git/.gitconfig.local
    ```
+   Add your name and email:
+   ```ini
+   [user]
+       name = Your Name
+       email = your.email@example.com
+   ```
 
+2. **Select Karabiner profile:**
+   - Open Karabiner-Elements
+   - Go to Profiles tab
+   - Select "default" for MacBook keyboard or "external" for ISO mechanical keyboard
 
-2. **Install Homebrew** (if not installed):
+3. **Install Homebrew** (if not installed):
    ```bash
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
 
-3. **Restart your terminal** to apply all changes.
+4. **Restart your terminal** to apply all changes.
+
+## 🔧 Troubleshooting
+
+### Symlinks not working
+The install script validates all symlinks. If you see errors, check:
+```bash
+ls -la ~/.zshrc
+ls -la ~/.config/nvim
+```
+Symlinks should point to your dotfiles directory.
+
+### Backups location
+All backups are stored in `~/.dotfiles_backup/` with timestamps:
+```bash
+ls -la ~/.dotfiles_backup/
+```
+
+### VS Code settings not applied
+The script symlinks both `settings.json` and `keybindings.json` (if present):
+- Settings: `~/Library/Application Support/Code/User/settings.json`
+- Keybindings: `~/Library/Application Support/Code/User/keybindings.json`
+
+If VS Code is running, restart it after installation.
+
+### Re-running the install script
+Safe to run multiple times! The script:
+- Skips if symlinks already point to dotfiles
+- Only backs up files that aren't already symlinks to dotfiles
+- Won't reinstall Oh My Zsh if it exists
