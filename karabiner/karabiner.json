@@ -18,6 +18,21 @@
                                     }
                                 ],
                                 "type": "basic"
+                            },
+                            {
+                                "description": "Hyper + P → open 1Password.",
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": {
+                                        "mandatory": ["left_command", "left_control", "left_option", "left_shift"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open -a '1Password'"
+                                    }
+                                ],
+                                "type": "basic"
                             }
                         ]
                     }
@@ -56,6 +71,21 @@
                                     {
                                         "key_code": "left_shift",
                                         "modifiers": ["left_command", "left_control", "left_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "Hyper + P → open 1Password.",
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": {
+                                        "mandatory": ["left_command", "left_control", "left_option", "left_shift"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open -a '1Password'"
                                     }
                                 ],
                                 "type": "basic"
