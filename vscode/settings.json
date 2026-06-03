@@ -15,7 +15,7 @@
     "list.activeSelectionForeground": "#ffffff",
     "list.inactiveSelectionForeground": "#ffffff",
     "list.focusAndSelectionOutline": "#00000000",
-    "list.highlightForeground": "#ffffff",
+    "list.highlightForeground": "#ffffff"
   },
 
   // Workbench Layout
@@ -45,7 +45,7 @@
     "*": true,
     "plaintext": false,
     "markdown": true,
-    "scminput": false,
+    "scminput": false
   },
   "extensions.ignoreRecommendations": true,
 
@@ -65,17 +65,17 @@
 
   // Tailwind CSS
   "tailwindCSS.includeLanguages": {
-    "erb": "html",
+    "erb": "html"
   },
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.colorDecorators": true,
 
   // Ruby
   "[ruby]": {
-    "editor.defaultFormatter": "rubocop.vscode-rubocop",
+    "editor.defaultFormatter": "rubocop.vscode-rubocop"
   },
   "git.blame.editorDecoration.enabled": true,
   "[erb]": {
-    "editor.defaultFormatter": "aliariff.vscode-erb-beautify",
-  },
+    "editor.defaultFormatter": "aliariff.vscode-erb-beautify"
+  }
 }
