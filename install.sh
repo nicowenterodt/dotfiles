@@ -187,6 +187,11 @@ main() {
   fi
   echo ""
 
+  # Claude Code
+  print_info "Setting up Claude Code configuration..."
+  safe_symlink "$DOTFILES/claude/settings.json" "$HOME/.claude/settings.json" "Claude Code settings.json"
+  echo ""
+
   # Homebrew packages
   if command -v brew &>/dev/null; then
     print_info "Installing Homebrew packages..."
@@ -210,6 +215,7 @@ main() {
     "$HOME/.config/wezterm/wezterm.lua"
     "$HOME/.config/karabiner/karabiner.json"
     "$HOME/.config/nvim"
+    "$HOME/.claude/settings.json"
   )
 
   for symlink in "${symlinks[@]}"; do

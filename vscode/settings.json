@@ -53,6 +53,29 @@
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
   "files.insertFinalNewline": false,
+
+  // Formatting
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "chat.commandCenter.enabled": false,
   "workbench.startupEditor": "none",
+  "claudeCode.preferredLocation": "sidebar",
+  "remote.autoForwardPortsSource": "hybrid",
+  "chat.viewSessions.orientation": "stacked",
+
+  // Tailwind CSS
+  "tailwindCSS.includeLanguages": {
+    "erb": "html"
+  },
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.colorDecorators": true,
+
+  // Ruby
+  "[ruby]": {
+    "editor.defaultFormatter": "rubocop.vscode-rubocop"
+  },
+  "git.blame.editorDecoration.enabled": true,
+  "[erb]": {
+    "editor.defaultFormatter": "aliariff.vscode-erb-beautify"
+  }
 }

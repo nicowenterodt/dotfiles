@@ -19,6 +19,10 @@ config.window_padding = {
 -- Hide tab bar when only one tab
 config.hide_tab_bar_if_only_one_tab = true
 
+-- Allow Option key to produce special characters (e.g., ~ with Opt+N on German keyboard)
+config.send_composed_key_when_left_alt_is_pressed = true
+config.send_composed_key_when_right_alt_is_pressed = true
+
 -- =============================================================================
 -- Keybindings
 -- =============================================================================
@@ -82,6 +86,25 @@ config.keys = {
 		key = "j",
 		mods = "CMD|OPT",
 		action = wezterm.action.ActivatePaneDirection("Down"),
+	},
+	-- Toggle pane zoom (maximize/restore active pane)
+	{
+		key = "Enter",
+		mods = "CMD|SHIFT",
+		action = wezterm.action.TogglePaneZoomState,
+	},
+	-- Rename current tab
+	{
+		key = "r",
+		mods = "CMD|OPT",
+		action = wezterm.action.PromptInputLine({
+			description = "Enter new name for tab",
+			action = wezterm.action_callback(function(window, pane, line)
+				if line then
+					window:active_tab():set_title(line)
+				end
+			end),
+		}),
 	},
 }
 
